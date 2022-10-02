@@ -86,7 +86,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="<p> 5.4% of total for derived types.</p>Including implementation: 451 statements, 11.6% of total for derived types.">5 statements</a>
+    title="<p> 4.8% of total for derived types.</p>Including implementation: 451 statements, 10.4% of total for derived types.">5 statements</a>
      </li> 
     <li><i class="fa fa-code"></i><a href="../src/runge_kutta_module.F90"> Source File</a></li>
   </ul>
@@ -122,7 +122,6 @@
       <a class="list-group-item" href="../type/rkf78_class.html#variable-stepsize_method">stepsize_method</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-rtol">rtol</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-atol">atol</a>
-      <a class="list-group-item" href="../type/rkf78_class.html#variable-p">p</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-hinit_method">hinit_method</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-num_rejected_steps">num_rejected_steps</a>
     </div>
@@ -138,7 +137,7 @@
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-integrate_to_event~2">integrate_to_event</a>
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-hstart">hstart</a>
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-hinit">hinit</a>
-      <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-step~6">step</a>
+      <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-step~9">step</a>
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-order~2">order</a>
     </div>
   </div>
@@ -280,7 +279,6 @@
       <a class="list-group-item" href="../type/rkf78_class.html#variable-stepsize_method">stepsize_method</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-rtol">rtol</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-atol">atol</a>
-      <a class="list-group-item" href="../type/rkf78_class.html#variable-p">p</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-hinit_method">hinit_method</a>
       <a class="list-group-item" href="../type/rkf78_class.html#variable-num_rejected_steps">num_rejected_steps</a>
     </div>
@@ -296,7 +294,7 @@
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-integrate_to_event~2">integrate_to_event</a>
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-hstart">hstart</a>
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-hinit">hinit</a>
-      <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-step~6">step</a>
+      <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-step~9">step</a>
       <a class="list-group-item" href="../type/rkf78_class.html#boundprocedure-order~2">order</a>
     </div>
   </div>
@@ -350,11 +348,6 @@
   <td><span class="anchor" id="variable-atol"></span>real(kind=wp),</td>
 <td>public,</td>  <td>dimension(:), allocatable</td><td>::</td>
   <td><strong>atol</strong></td><td></td><td></td><td><p>absolute tolerance (<code>size(n)</code>)</p></td>
-</tr>
-<tr>
-  <td><span class="anchor" id="variable-p"></span>integer,</td>
-<td>public</td>  <td></td><td>::</td>
-  <td><strong>p</strong></td><td> =</td><td>0</td><td><p>order of the method</p></td>
 </tr>
 <tr>
   <td><span class="anchor" id="variable-hinit_method"></span>integer,</td>
@@ -781,7 +774,7 @@ differential equation method.</p></td>
 </div>
 
      <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-step~6"></span><h3>procedure, public :: <strong>step</strong>  => rkf78   </h3></div>
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-step~9"></span><h3>procedure, public :: <strong>step</strong>  => rkf78   </h3></div>
   <ul class="list-group">
       <li class="list-group-item">
           <h3>interface
