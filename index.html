@@ -94,6 +94,83 @@
 <a href="https://github.com/jacobwilliams/runge-kutta-fortran/commits/master"><img alt="last-commit" src="https://img.shields.io/github/last-commit/jacobwilliams/runge-kutta-fortran"></a></p>
 <h3>Description</h3>
 <p><strong>This is a work in progress!</strong></p>
+<p>Available methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method name</th>
+<th>Type</th>
+<th>Order</th>
+<th>Number of Points</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rk4</code></td>
+<td>Fixed-step</td>
+<td>4</td>
+<td>4</td>
+<td><a href="https://archive.org/stream/zeitschriftfrma12runggoog#page/n449/mode/2up">Kutta (1901)</a></td>
+</tr>
+<tr>
+<td><code>rk7</code></td>
+<td>Fixed-step</td>
+<td>7</td>
+<td>9</td>
+<td><a href="https://www.ams.org/journals/mcom/1966-20-093/S0025-5718-1966-0187406-1/S0025-5718-1966-0187406-1.pdf">Shanks (1966)</a></td>
+</tr>
+<tr>
+<td><code>rk8-10</code></td>
+<td>Fixed-step</td>
+<td>8</td>
+<td>10</td>
+<td><a href="http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19650022581.pdf">Shanks (1965)</a></td>
+</tr>
+<tr>
+<td><code>rkf78</code></td>
+<td>Variable-step</td>
+<td>7</td>
+<td>13</td>
+<td><a href="https://ntrs.nasa.gov/citations/19680027281">Fehlberg(1968)</a></td>
+</tr>
+<tr>
+<td><code>rkf89</code></td>
+<td>Variable-step</td>
+<td>8</td>
+<td>17</td>
+<td><a href="https://ntrs.nasa.gov/citations/19680027281">Fehlberg(1968)</a></td>
+</tr>
+<tr>
+<td><code>rkv89</code></td>
+<td>Variable-step</td>
+<td>8</td>
+<td>16</td>
+<td><a href="xxx">Verner (1978)</a></td>
+</tr>
+<tr>
+<td><code>rkf108</code></td>
+<td>Variable-step</td>
+<td>10</td>
+<td>17</td>
+<td><a href="https://sce.uhcl.edu/rungekutta/rk108.txt">Feagin (2006)</a></td>
+</tr>
+<tr>
+<td><code>rkf1210</code></td>
+<td>Variable-step</td>
+<td>12</td>
+<td>25</td>
+<td><a href="https://sce.uhcl.edu/rungekutta/rk1210.txt">Feagin (2006)</a></td>
+</tr>
+<tr>
+<td><code>rkf1412</code></td>
+<td>Variable-step</td>
+<td>14</td>
+<td>35</td>
+<td><a href="https://sce.uhcl.edu/rungekutta/rk1412.txt">Feagin (2006)</a></td>
+</tr>
+</tbody>
+</table>
 <h3>Compiling</h3>
 <p>A <code>fmp.toml</code> file is provided for compiling <code>runge-kutta-fortran</code> with the <a href="https://github.com/fortran-lang/fpm">Fortran Package Manager</a>. For example, to build:</p>
 <div class="codehilite"><pre><span></span><code>fpm build --profile release
@@ -108,15 +185,11 @@
 <h3>References</h3>
 <ul>
 <li>E. B. Shanks, "<a href="http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19650022581.pdf">Higher Order Approximations of Runge-Kutta Type</a>", NASA Technical Note, NASA TN D-2920, Sept. 1965.</li>
-<li>E. B. Shanks, "Solutions of Differential Equations by Evaluations of Functions" Math. Comp. 20 (1966).</li>
+<li>E. B. Shanks, "<a href="https://www.ams.org/journals/mcom/1966-20-093/S0025-5718-1966-0187406-1/S0025-5718-1966-0187406-1.pdf">Solutions of Differential Equations by Evaluations of Functions</a>" Math. Comp. 20 (1966).</li>
 <li>E. Fehlberg, "Classical Fifth-, Sixth-, Seventh-, and Eighth-Order Runge-Kutta Formulas with Stepsize Control", <a href="https://ntrs.nasa.gov/citations/19680027281">NASA TR R-2870</a>, 1968.</li>
 <li>J. H. Verner, "Explicit Runge-Kutta Methods with Estimates of the Local Truncation Error", SIAM Journal on Numerical Analysis, 15(4), 772-790, 1978.</li>
-<li>
-<p>T. Feagin, "<a href="https://sce.uhcl.edu/rungekutta/">High-Order Explicit Runge-Kutta Methods</a>"</p>
-</li>
-<li>
-<p>J. C. Butcher, "<a href="https://www.sciencedirect.com/science/article/abs/pii/0168927495001085">A history of Runge-Kutta methods</a>", Applied Numerical Mathematics, Volume 20, Issue 3, March 1996, Pages 247-260</p>
-</li>
+<li>T. Feagin, "<a href="https://sce.uhcl.edu/rungekutta/">High-Order Explicit Runge-Kutta Methods</a>"</li>
+<li>J. C. Butcher, "<a href="https://www.sciencedirect.com/science/article/abs/pii/0168927495001085">A history of Runge-Kutta methods</a>", Applied Numerical Mathematics, Volume 20, Issue 3, March 1996, Pages 247-260</li>
 </ul>
 <h3>See also</h3>
 <ul>
